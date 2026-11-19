@@ -1,31 +1,9 @@
-FOOTBALL ANALYST 3.1 — PROTOTIPO 0.2 (SOLO FONTI GRATUITE)
+FOOTBALL ANALYST 3.1 - VERSIONE 0.2 (IMPORT CSV)
 
-Questa è una Progressive Web App (PWA) per analisi del primo tempo.
+Novita: scheda Dati automatici con import CSV Open-Matchday per Serie A, Premier League, La Liga, Bundesliga e Ligue 1. Cerca una squadra e calcola frequenze storiche 1T su ultime 5 e 10 partite quando il punteggio HT e disponibile.
 
-VINCOLO ECONOMICO
-- Costo previsto per API e dati: 0 euro.
-- Nessun piano a pagamento o prova con rinnovo automatico.
-- Nessuna carta di credito richiesta per le fonti selezionate.
+Fonte: https://github.com/L1nu-X/open-matchday (CSV pubblici, accesso senza chiave). I dati sono aggiornati quotidianamente, ma la copertura dei punteggi HT e incompleta. Partite senza HT sono escluse dai calcoli, mai considerate 0-0. Le frequenze non sono probabilita previste.
 
-FONTI GRATUITE PREVISTE
-1) Open-Matchday (GitHub): CSV pubblici aggiornati quotidianamente; risultati, punteggi HT, minuti dei gol e alcune statistiche per circa 75 competizioni. Copertura variabile.
-2) API-Football Free: 100 richieste/giorno secondo la pagina ufficiale; registrazione gratuita e API key facoltativa. Non necessaria alla prima versione.
-3) StatsBomb Open Data: eventi e formazioni storiche per competizioni selezionate, non live.
-4) OpenLigaDB: API comunitaria per le competizioni supportate.
-5) FootyStats: consultazione manuale delle statistiche liberamente visibili; non si presume accesso gratuito all'API.
+Limiti: questa versione non fornisce ancora una previsione A/B, non calcola xG o pressione 0-15 e non integra formazioni/infortuni. NO BET finche modello e dati non sono adeguati. Solo uso personale non commerciale, secondo i termini del dataset.
 
-LIMITAZIONI IMPORTANTI
-- Nessuna fonte gratuita copre tutti i campionati e tutti gli indicatori richiesti dal Protocollo 3.1.
-- xG, tiri 0-15, formazioni, assenze e split 1T possono mancare: in tal caso N.D.
-- Le frequenze storiche non sono probabilità previste. Il verdetto resta NO BET se manca un modello supportato e dati sufficienti.
-- L'app attuale è un prototipo: non è ancora collegata automaticamente ai feed.
-
-INSTALLAZIONE
-Per installarla come PWA serve pubblicarla su un hosting HTTPS (ad esempio GitHub Pages, gratuito) e poi usare Chrome Android > menu > Aggiungi a schermata Home / Installa app.
-
-FILE
-- index.html: interfaccia
-- manifest.webmanifest: manifest PWA
-- sw.js: service worker
-
-Uso personale. Esportare regolarmente l'archivio JSON.
+Per aggiornare su GitHub Pages: caricare index.html, sw.js e README.txt nella root del repository, sostituendo i file esistenti; mantenere manifest.webmanifest. Poi attendere il deploy e ricaricare la PWA.
