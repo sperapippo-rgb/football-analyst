@@ -1,9 +1,24 @@
-FOOTBALL ANALYST 3.1 - VERSIONE 0.2 (IMPORT CSV)
+FOOTBALL ANALYST 3.1 — VERSIONE 0.3
 
-Novita: scheda Dati automatici con import CSV Open-Matchday per Serie A, Premier League, La Liga, Bundesliga e Ligue 1. Cerca una squadra e calcola frequenze storiche 1T su ultime 5 e 10 partite quando il punteggio HT e disponibile.
+Contenuto:
+- index.html: app aggiornata
+- manifest.webmanifest: configurazione PWA
+- sw.js: service worker aggiornato
+- README.txt: istruzioni
 
-Fonte: https://github.com/L1nu-X/open-matchday (CSV pubblici, accesso senza chiave). I dati sono aggiornati quotidianamente, ma la copertura dei punteggi HT e incompleta. Partite senza HT sono escluse dai calcoli, mai considerate 0-0. Le frequenze non sono probabilita previste.
+INSTALLAZIONE AGGIORNAMENTO SU GITHUB (da Android):
+1. Apri https://github.com/sperapippo-rgb/football-analyst
+2. Entra in index.html, premi la matita (Edit).
+3. Seleziona tutto il contenuto, sostituiscilo con il nuovo index.html del pacchetto e fai Commit changes.
+4. Ripeti per sw.js e manifest.webmanifest.
+5. Attendi circa 1-3 minuti, poi apri https://sperapippo-rgb.github.io/football-analyst/ e aggiorna la pagina.
+6. Se l'app installata mostra ancora la vecchia versione, chiudila completamente e riaprila; eventualmente svuota la cache del sito.
 
-Limiti: questa versione non fornisce ancora una previsione A/B, non calcola xG o pressione 0-15 e non integra formazioni/infortuni. NO BET finche modello e dati non sono adeguati. Solo uso personale non commerciale, secondo i termini del dataset.
-
-Per aggiornare su GitHub Pages: caricare index.html, sw.js e README.txt nella root del repository, sostituendo i file esistenti; mantenere manifest.webmanifest. Poi attendere il deploy e ricaricare la PWA.
+IMPORTANTE SUI DATI:
+- Dataset automatico Open-Matchday: 75 competizioni maschili (stagione 2026/27), aggiornato quotidianamente.
+- I punteggi HT sono presenti solo per una parte delle partite: il conteggio HT mostra il campione effettivamente disponibile.
+- Il catalogo non documenta campionati femminili: selezionando Femminile l'app mostra N.D. e non carica dati maschili.
+- Le percentuali sono frequenze storiche, non probabilità previste.
+- Non esiste ancora un modello probabilistico validato: decisione ufficiale prudenziale = NO BET.
+- Uso non commerciale e personale. Fonte: https://github.com/oladeeayo/open-matchday
+- Costo previsto: 0 euro; nessuna API a pagamento o chiave richiesta.
